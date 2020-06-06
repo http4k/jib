@@ -3,7 +3,7 @@ buildscript {
     ext.http4k_version = '3.249.0'
     ext.junit_version = '5.6.0'
 
-        dependencies {
+    dependencies {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
 }
@@ -23,12 +23,12 @@ repositories {
 }
 
 dependencies {
-    compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
-    compile "org.http4k:http4k-core:$http4k_version"
+    api "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+    api "org.http4k:http4k-core:$http4k_version"
 
-    testCompile "org.junit.jupiter:junit-jupiter-api:$junit_version"
-    testCompile "org.junit.jupiter:junit-jupiter-engine:$junit_version"
-    testCompile "org.http4k:http4k-testing-hamkrest:$http4k_version"
+    testApi "org.junit.jupiter:junit-jupiter-api:$junit_version"
+    testApi "org.junit.jupiter:junit-jupiter-engine:$junit_version"
+    testApi "org.http4k:http4k-testing-hamkrest:$http4k_version"
 }
 
 test {
